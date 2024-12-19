@@ -1,22 +1,9 @@
-// Déclarez et initialisez l'état du mode sombre
-let isNightMode = false;  // False = Mode clair, True = Mode sombre
-
-// Récupérez les éléments nécessaires
-const monHeader = document.querySelector("header");
-const monFooter = document.querySelector("footer");
-const tabLien = document.querySelectorAll("a");
-const toggleButton = document.getElementById("toggleButton");
-
-// Fonction pour réinitialiser les couleurs du body
-function resetBodyColors(isNightMode) {
-    if (isNightMode) {
-        document.body.style.backgroundColor = "black";
-        document.body.style.color = "white"; // Assurez-vous que le texte soit visible en mode sombre
-    } else {
-        document.body.style.backgroundColor = "white";
-        document.body.style.color = "black"; // Assurez-vous que le texte soit visible en mode clair
-    }
-}
+// Références aux éléments
+let toggleButton = document.querySelector("#toggleMode");
+let monFooter = document.querySelector("footer");
+let monHeader = document.querySelector("header");
+let tabLien = document.querySelectorAll("a");
+let isNightMode = false; // Variable pour suivre l'état du mode
 
 // Fonction pour changer la couleur de fond et de texte du header et du footer
 function setBackgroundAndTextColor(element, isNightMode) {
@@ -26,6 +13,17 @@ function setBackgroundAndTextColor(element, isNightMode) {
     } else {
         element.style.backgroundColor = "white"; // Fond blanc en mode clair
         element.style.color = "black"; // Texte noir en mode clair
+    }
+}
+
+// Fonction pour réinitialiser les couleurs du body
+function resetBodyColors(isNightMode) {
+    if (isNightMode) {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white"; // Assurez-vous que le texte soit visible en mode sombre
+    } else {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black"; // Assurez-vous que le texte soit visible en mode clair
     }
 }
 
@@ -53,23 +51,6 @@ function setFooterTextColor(isNightMode) {
     });
 }
 
-// Fonction pour inverser les couleurs d'un élément
-function invertColors(element) {
-    let computedStyle = window.getComputedStyle(element);
-    let bgColor = computedStyle.backgroundColor;
-    let textColor = computedStyle.color;
-
-    // Inverser la couleur de fond
-    if (bgColor && bgColor !== "rgba(0, 0, 0, 0)" && bgColor !== "transparent") {
-        element.style.backgroundColor = invertColor(bgColor);
-    }
-
-    // Inverser la couleur du texte
-    if (textColor && textColor !== "rgb(0, 0, 0)" && textColor !== "rgb(255, 255, 255)") {
-        element.style.color = invertColor(textColor);
-    }
-}
-
 // Fonction pour inverser une couleur (RGB ou hexadécimale)
 function invertColor(color) {
     let rgb;
@@ -90,7 +71,7 @@ function invertColor(color) {
     let b = 255 - rgb[2];
 
     // Retourner la couleur inversée en format RGB
-    return `rgb(${r}, ${g}, ${b})`;
+    return `rgb(${r}, ${g}, ${b})`; // Correction ici
 }
 
 // Convertir une couleur hexadécimale en RGB
@@ -107,7 +88,7 @@ function hexToRgb(hex) {
     return [r, g, b];
 }
 
-// Fonction pour inverser toutes les couleurs de la page
+// Fonction pour basculer entre le mode clair et sombre
 function toggleNightMode() {
     // Appliquer les couleurs du body
     resetBodyColors(isNightMode);
@@ -119,16 +100,8 @@ function toggleNightMode() {
     // Appliquer la couleur des liens
     setLinkColor(isNightMode);
 
-    // Appliquer la couleur des textes dans le footer
+    // Appliquer la couleur du texte dans le footer
     setFooterTextColor(isNightMode);
-
-    // Appliquer la couleur de texte et de fond des autres éléments
-    let allElements = document.querySelectorAll("*");
-    allElements.forEach(element => {
-        if (element !== monHeader && element !== monFooter) {
-            invertColors(element);
-        }
-    });
 
     // Basculer l'état du mode
     isNightMode = !isNightMode;
