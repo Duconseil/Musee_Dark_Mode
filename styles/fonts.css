@@ -1,0 +1,21 @@
+@font-face {
+    font-family:"Switzer";
+    src: url("/fonts/Switzer-Regular.woff2") format("woff");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family:"Switzer";
+    src: url("/fonts/Switzer-Black.woff2") format("woff");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family:"Switzer";
+    src: url("/fonts/Switzer-Semibold.woff2") format("woff");
+    font-weight: 500;
+}
+
+body {
+    font-family: "Switzer";
+}

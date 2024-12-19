@@ -1,0 +1,250 @@
+
+.flex {
+    display: flex;
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+    }
+}
+
+.home-page {
+    padding: 0px;
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.home-page>div {
+    flex-basis: 50%;
+}
+
+.home-page img {
+    width: 100%;
+    min-width: 250px;
+}
+
+@media screen and (max-width: 960px) {
+    .home-page {
+        flex-direction: column;
+    }
+}
+
+.home-page H1 {
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-right: 70px;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.description {
+    margin: 10px 0;
+    margin-right: 70px;
+    padding: 0;
+    font-weight: 300;
+}
+
+.home-page a {
+    margin: 0;
+    margin-right: 50px;
+    margin-top: 100px;
+    padding: 0;
+    color: black;
+}
+
+.home-page {
+    margin: 8px;
+    padding: 10px;
+}
+
+
+.principal-title {
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.discover-link {
+    display: block;
+    margin-top: 100px;
+    text-align: right;
+    font-weight: 800;
+    margin-left: 70px;
+    font-size: 20px;
+}
+
+
+h2 {
+    margin-top: 100px;
+    font-size: 30px;
+    margin-left: 0px;
+    padding-left: 00px;
+    margin-bottom: 0px;
+    font-weight: 800;
+}
+
+.titre-expo {
+    padding-left: 0px;
+}
+
+h4 {
+    font-size: 40px;
+    font-weight: 900;
+    margin-left: 50px;
+    font-weight: 800;
+}
+
+.button {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+}
+
+
+.news {
+    display: flex;
+    align-items: flex-end;
+}
+
+.pictures-news {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+    flex-grow: 1;
+    gap: 40px;
+}
+
+.pictures-news>div {
+    width: calc(100% / 3);
+}
+
+.pictures-news img {
+    width: 100%;
+}
+
+h5 {
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.evenement-du-moment {
+    display: flex;
+    margin: 0px;
+    justify-content: space-between;
+}
+
+.contenu-evenement {
+    padding: 0px;
+    margin-bottom: 100px;
+}
+
+.coeur-de-page {
+    flex-wrap: wrap;
+}
+
+a {
+    color: black;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-top: 100px;
+    margin-left: 0px;
+}
+
+.article-exposition {
+    padding-right: 0px;
+}
+.bouton-expo {
+    margin: 0px;
+    font-size: 20px;
+    margin-top: 100px;
+    align-items: flex-end;
+}
+
+.bouton-evenement {
+    margin: 0px;
+    font-size: 20px;
+    align-items: flex-end;
+}
+
+@media (max-width: 375px) {
+    .container-3 {
+        margin: 8px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 30px;
+    }
+    
+    h1.principal-title {
+        font-size: 20px;
+    }
+    
+    .section.evenement-du-moment {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    h2.titre-expo {
+        margin-top: 20px;
+    }
+    
+    p {
+        margin-bottom: 20px;
+    }
+    
+    a.discover-link {
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 580px) {
+    .pictures-news {
+        flex-direction: column;
+    }
+    
+    .pictures-news>div {
+        width: calc(100%);
+    }
+    
+    .article-exposition {
+        padding-right: 0px;
+    }
+    
+    .bouton-evenement {
+        margin-top: 15px;
+    }
+
+    .bouton-expo{
+        margin-top: 15px;
+    }
+    
+    H1 {
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+    
+    H2 {
+        margin-top: 50px;
+    }
+    
+    a.discover-link {
+        margin-top: 50px;
+    }
+}

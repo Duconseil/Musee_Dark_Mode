@@ -1,0 +1,112 @@
+.title-line {
+    text-align: end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .title-line .line {
+    height: 3px;
+    background: black;
+    width: 100%;
+    display: block;
+  }
+
+  a {
+    color: black;
+  }
+
+.exposition-block {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+
+  section {
+    padding: 0px 50px;
+  }
+
+  h1.titre{
+    font-weight: bold;
+    font-weight: 800;
+  }
+
+  h1, h2 {
+    font-weight: 600;
+  }
+
+  .button-group {
+    display: flex;          /* Utilise flexbox pour organiser les boutons */
+    justify-content: flex-end; /* Aligne les boutons à droite */
+    cursor: pointer;          /* Change le curseur en "main" au survol */
+    transition: 0.3s;         /* Animation pour les interactions */
+    margin-bottom: 50px;
+}
+
+
+button .button-group, .clique-pour-decouvrir {
+    margin: 5px;            /* Optionnel : ajoute un peu d'espace entre les boutons */
+    padding: 10px 15px;     /* Ajuste l'intérieur des boutons */
+    border: 1px solid black; /* Optionnel : style des boutons */
+    background-color: #f0f0f0; /* Optionnel : couleur de fond des boutons */
+}
+
+.button-group {
+    font-size: 30px;          /* Taille du texte */
+    padding: 10px 20px;       /* Espace intérieur (haut/bas, gauche/droite) */
+    cursor: pointer;          /* Change le curseur en "main" au survol */
+    transition: 0.3s;         /* Animation pour les interactions */
+}
+
+.titre {
+  margin: 0px;
+  margin-left: 50px;
+  margin-top: 100px;
+}
+
+.discover-link {
+  color: black;
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 800;
+  margin-bottom: 100px;
+}
+
+.clique-pour-decouvrir {
+    font-size: 15px;
+}
+
+.argo exposition-block {
+  color: black;
+}
+
+@media (max-width: 500px) {
+  .div.container-2 {
+    flex-direction: column;
+  }
+
+  .button-group {
+    font-size: 15px;
+  }
+  span.button-group {
+    margin-right: 30px;
+    padding: 0px;
+    margin-top: 20px;
+  }
+
+  h1.titre {
+    margin: 0px;
+    margin-top: 30px;
+    padding: 0 30px;
+  }
+
+  .container-2 {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  a {
+    color: black;
+  }
+}

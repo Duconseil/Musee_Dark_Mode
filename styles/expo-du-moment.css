@@ -1,0 +1,45 @@
+
+
+.expo-du-moment {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.expo-du-moment H2 {
+    font-weight: 800;
+    font-size: 30px;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.bouton-exposition {
+    font-size: 20px;
+    margin-left: 400px;
+    margin-top: 80px;
+}
+
+.article-exposition {
+    align-items: flex-start;
+    justify-content: center;
+    justify-content: space-around;
+    padding-right: 50px;
+}
+
+.article-exposition p {
+    font-size: 15px;
+}
+
+.article-exposition a {
+    font-weight: 800;
+    font-size: 19px;
+    color: black;
+}
+
+.article-exposition img {
+    width: 100%;
+}
+
+hr {
+    margin-left: 50px;
+}

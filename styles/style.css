@@ -1,0 +1,31 @@
+
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.dark {
+    color: white;
+    background-color: black;
+}
+
+.container-2 {
+    display: flex;
+    gap: 40px;
+}
+
+.container-3 {
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    margin: 0;
+}
+
+@media screen and (max-width: 960px) {
+    .hidden-mobile {
+        display: none;
+    }   
+}
